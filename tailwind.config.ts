@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				display: ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +66,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom farming platform colors
+				farm: {
+					green: {
+						light: '#E7F3EF',
+						DEFAULT: '#4CAF50',
+						dark: '#2E7D32'
+					},
+					earth: {
+						light: '#F5F1E6',
+						DEFAULT: '#9C8867',
+						dark: '#5D4037'
+					},
+					sky: {
+						light: '#E3F2FD',
+						DEFAULT: '#64B5F6',
+						dark: '#1976D2'
+					}
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +107,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'scale-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
+				'count-up': {
+					'0%': {
+						transform: 'translateY(100%)'
+					},
+					'100%': {
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-up': 'fade-up 0.7s ease-out forwards',
+				'fade-in': 'fade-in 0.7s ease-out forwards',
+				'scale-in': 'scale-in 0.5s ease-out forwards',
+				'count-up': 'count-up 0.5s ease-out forwards'
 			}
 		}
 	},

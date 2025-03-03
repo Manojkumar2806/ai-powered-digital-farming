@@ -9,6 +9,7 @@ import ChatbotInterface from '@/components/ui/ChatbotInterface';
 import AnimatedNumber from '@/components/ui/AnimatedNumber';
 import GlassCard from '@/components/ui/GlassCard';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { 
   Leaf, 
@@ -18,7 +19,8 @@ import {
   DollarSign, 
   ChevronRight, 
   Wheat,
-  Tractor
+  Tractor,
+  Send
 } from 'lucide-react';
 
 // Sample data for charts

@@ -16,7 +16,7 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: '1',
-    content: 'Hello! I'm your AI farming assistant. How can I help you today?',
+    content: "Hello! I'm your AI farming assistant. How can I help you today?",
     sender: 'bot',
     timestamp: new Date(),
   },
